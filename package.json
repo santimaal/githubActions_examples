@@ -1,0 +1,24 @@
+{
+  "name": "node-easy-test-app",
+  "version": "1.0.0",
+  "description": "Never miss a thing in Life. Take test quickly. Organize and keep track of all your test.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "Express",
+    "RestAPI",
+    "Test"
+  ],
+  "author": "callicoder",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
