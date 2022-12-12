@@ -2,7 +2,7 @@ name: primer-ejemplo
 on: 
   push:
    branches:
-    - nodejs_linter_job
+    - node_jest_job
 jobs:
   linter-execution:
     runs-on: ubuntu-latest
