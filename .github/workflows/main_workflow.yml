@@ -7,7 +7,6 @@ jobs:
   linter-execution:
     strategy:
       matrix:
-        os: ubuntu-latest
         node: [10,12]
     runs-on: ubuntu-latest
     steps:
