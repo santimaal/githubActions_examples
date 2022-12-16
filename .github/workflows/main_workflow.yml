@@ -50,14 +50,14 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v2
       - name: Send mail
-        run: echo ${{secrets.GITHUB_EMAIL}}
-        # uses: dawidd6/action-send-mail@v3
-        # with:
-        #   server_address: smtp.gmail.com
-        #   server_port: 465
-        #   username: ${{secrets.GITHUB_EMAIL}}
-        #   password: ${{secrets.GITHUB_PASSWORD}}
-        #   from: Santi Martinez
-        #   to: santimartinezalbert02@gmail.com
-        #   subject: Test
-        #   body: Error en el test
+        # run: echo ${{secrets.GITHUB_EMAIL}}
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{secrets.GITHUB_EMAIL}}
+          password: ${{secrets.GITHUB_PASSWORD}}
+          from: Santi Martinez
+          to: santimartinezalbert02@gmail.com
+          subject: Test
+          body: Error en el test
