@@ -55,8 +55,8 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 465
-          username: ${{secrets.EMAIL}}
-          password: ${{secrets.PASSWORD}}
+          # username: ${{secrets.EMAIL}}
+          # password: ${{secrets.PASSWORD}}
           from: Santi Martinez
           to: santimartinezalbert02@gmail.com
           subject: Test
