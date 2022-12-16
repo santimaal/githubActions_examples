@@ -5,10 +5,11 @@ on:
     - nodejs_nodeversions_job
 jobs:
   linter-execution:
-    matrix:
-      os: ubuntu-latest
-      node: [10,12]
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: ubuntu-latest
+        node: [10,12]
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
