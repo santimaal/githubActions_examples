@@ -47,6 +47,8 @@ jobs:
   send-mail:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout code
+        uses: actions/checkout@v2
       - name: Send mail
         run: echo ${{secrets.GITHUB_EMAIL}}
         # uses: dawidd6/action-send-mail@v3
