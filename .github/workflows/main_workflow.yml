@@ -33,7 +33,7 @@ jobs:
       - name: jest test
         run: npm install jest && npm test
         if: failure()
-        run: echo Error
+        run: echo "Error"
   environment_test_execution:
     strategy:
       matrix:
