@@ -58,4 +58,5 @@ jobs:
           ignore_cert: true
           to: santimartinezalbert02@gmail.com
           from: Santi Martinez
+          subject: Test
           body: Error en el test
