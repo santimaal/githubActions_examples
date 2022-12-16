@@ -44,3 +44,18 @@ jobs:
         uses: adeloyedeji/github-actions-hello@v1.0
         with: 
           who-to-greet: ${{matrix.DESTINATION_PERSON}}
+  send-mail:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send mail
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.EMAIL }}
+          password: ${{ secrets.PASSWORD }}
+          secure: true
+          ignore_cert: true
+          to: santimartinezalbert02@gmail.com
+          from: Santi Martinez
+          body: Error en el test
