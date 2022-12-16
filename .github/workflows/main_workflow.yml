@@ -52,8 +52,8 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 465
-          username: ${{ secrets.EMAIL }}
-          password: ${{ secrets.PASSWORD }}
+          username: ${{secrets.GITHUB_EMAIL}}
+          password: ${{secrets.GITHUB_PASSWORD}}
           secure: true
           ignore_cert: true
           from: Santi Martinez
