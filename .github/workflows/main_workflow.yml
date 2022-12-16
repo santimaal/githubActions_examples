@@ -31,9 +31,12 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v2
       - name: jest test
+        id: test
         run: npm install jest && npm test
-        if: failure()
-        run: echo "Error"
+        continue-on-error: true
+      - name: Check on failures
+        if: steps.test.outcome != 'success'
+        run: echo "error"
   environment_test_execution:
     strategy:
       matrix:
