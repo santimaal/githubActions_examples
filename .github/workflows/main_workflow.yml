@@ -44,6 +44,3 @@ jobs:
       - uses: adeloyedeji/github-actions-hello@v1.0
         with: 
           who-to-greet: ${{matrix.DESTINATION_PERSON}}
-
-
-
