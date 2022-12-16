@@ -2,7 +2,7 @@ name: primer-ejemplo
 on: 
   push:
    branches:
-    - nodejs_nodeversions_job
+    - nodejs_environment_job
 jobs:
   linter-execution:
     strategy:
