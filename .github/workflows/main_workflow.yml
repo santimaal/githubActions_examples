@@ -2,13 +2,20 @@ name: primer-ejemplo
 on: 
   push:
    branches:
-    - node_jest_job
+    - nodejs_nodeversions_job
 jobs:
   linter-execution:
+    matrix:
+      os: ubuntu-latest
+      node: [10,12]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: 
+        uses: actions/setup-node@v2
+          with:
+          node-version: ${{ matrix.node }}
       - name: Linter execution
         uses: github/super-linter@v4.9.7
         env:
