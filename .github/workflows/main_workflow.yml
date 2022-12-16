@@ -56,7 +56,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           secure: true
           ignore_cert: true
-          to: santimartinezalbert02@gmail.com
           from: Santi Martinez
+          to: santimartinezalbert02@gmail.com
           subject: Test
           body: Error en el test
