@@ -27,4 +27,9 @@ jobs:
           name: my-artifact
       - name: Publish to surge.sh
         uses: dswistowski/surge-sh-action@v1.0.1
+        with:
+          domain: 'estemismo.surge.sh'
+          project: '.'
+          login: ${{ secrets.surge_login }}
+          token: ${{ secrets.surge_token }}
         
