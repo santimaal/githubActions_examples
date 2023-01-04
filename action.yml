@@ -9,7 +9,7 @@ inputs:
     required: true
 outputs:
   msg:
-    description: "mensaje de respuesta"
+    description: "message"
 runs:
   using: "node16"
   main: "dist/index.js"
