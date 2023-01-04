@@ -7,9 +7,6 @@ inputs:
   telegram_chat:
     description: "chat id de telegram"
     required: true
-outputs:
-  msg:
-    description: "mensaje de respuesta"
 runs:
   using: "node16"
   main: "index.js"
