@@ -1,0 +1,15 @@
+name: telegram_action
+description: "Action que envia un telegram"
+inputs:
+  telegram_token:
+    description: "token de telegram"
+    required: true
+  telegram_chat:
+    description: "chat id de telegram"
+    required: true
+outputs:
+  msg:
+    description: "mensaje de respuesta"
+runs:
+  using: "node16"
+  main: "index.js"
