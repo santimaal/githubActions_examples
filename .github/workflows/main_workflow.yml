@@ -1,0 +1,14 @@
+name: telegram
+on:
+  push:
+    branches:
+      - "telegram"
+jobs:
+  send_message:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./
+        with:
+          telegram_token: ${{secrets.TELEGRAM_TOKEN}}
+          telegram_chat: ${{secrets.TELEGRAM_USR_ID}}
