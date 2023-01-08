@@ -1,18 +1,17 @@
 const core = require('@actions/core');
-// const TelegramBot = require('node-telegram-bot-api');
+const TelegramBot = require('node-telegram-bot-api');
 
 // replace the value below with the Telegram token you receive from @BotFather
 try {
-  // const token = core.getInput('telegram_token');
+  const token = core.getInput('telegram_token');
   console.log("aaa")
-  // console.log(core.getInput('telegram_token'))
-  // const chat_id = core.getInput('chat_id');
+  const chat_id = core.getInput('chat_id');
   const message = "this is a test"
   
   // Create a bot that uses 'polling' to fetch new updates
-  // const bot = new TelegramBot(token, {polling: true});
+  const bot = new TelegramBot(token, {polling: true});
   
-  // bot.sendMessage(chat_id, message);
+  bot.sendMessage(chat_id, message);
 }
 catch (e){
   core.setFailed(e.message)
