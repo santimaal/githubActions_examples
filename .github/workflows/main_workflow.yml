@@ -9,6 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: ./
-        with:
+        env:
           TELEGRAM_TOKEN: ${{secrets.TELEGRAM_TOKEN}}
           TELEGRAM_CHAT: ${{secrets.TELEGRAM_USR_ID}}
