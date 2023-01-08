@@ -5,7 +5,7 @@ const core = require('@actions/core');
 try {
   // const token = core.getInput('telegram_token');
   console.log("aaa")
-  console.log(core.getInput('telegram_token'))
+  // console.log(core.getInput('telegram_token'))
   // const chat_id = core.getInput('chat_id');
   const message = "this is a test"
   
