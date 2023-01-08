@@ -54605,42 +54605,19 @@ module.exports = JSON.parse('["ac","com.ac","edu.ac","gov.ac","net.ac","mil.ac",
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-// const core = require('@actions/core');
 const TelegramBot = __nccwpck_require__(5487);
+const token = process.env.telegram_token;
+const chatId = process.env.telegram_chat;
+const bot = new TelegramBot(token, { polling: true });
+const username = "Santi";
 
-// replace the value below with the Telegram token you receive from @BotFather
-const token = process.env.TELEGRAM_TOKEN
+async function sendMessage() {
+    await bot.sendMessage(chatId, 'Workflow ejecutado correctamente tras el último commit. Saludos ' + username);
+    console.log('Mensaje enviado');
+    process.exit(0);
+}
 
-const chat_id = Number(process.env.TELEGRAM_CHAT);
-const message = "this is a test"
-
-// Create a bot that uses 'polling' to fetch new updates
-const bot = new TelegramBot(token, {polling: true});
-
-bot.sendMessage(chat_id, message);
-
-// Matches "/echo [whatever]"
-// bot.onText(/\/echo (.+)/, (msg, match) => {
-//   // 'msg' is the received Message from Telegram
-//   // 'match' is the result of executing the regexp above on the text content
-//   // of the message
-
-//   const chatId = msg.chat.id;
-//   const resp = match[1]; // the captured "whatever"
-
-//   // send back the matched "whatever" to the chat
-//   bot.sendMessage(chatId, resp);
-// });
-
-// // Listen for any kind of message. There are different kinds of
-// // messages.
-// bot.on('message', (msg) => {
-//   const chatId = msg.chat.id;
-//   console.log(msg);
-
-//   // send a message to the chat acknowledging receipt of their message
-//   bot.sendMessage(chatId, msg.text);
-// });
+sendMessage();
 })();
 
 module.exports = __webpack_exports__;
