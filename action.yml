@@ -3,10 +3,10 @@ description: "Action que envia un telegram"
 inputs:
   telegram_token:
     description: "token de telegram"
-    required: true
+    required: false
   telegram_chat:
     description: "chat id de telegram"
-    required: true
+    required: false
 runs:
   using: "node16"
   main: "dist/index.js"
