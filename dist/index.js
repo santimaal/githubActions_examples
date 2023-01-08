@@ -54606,8 +54606,8 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 const TelegramBot = __nccwpck_require__(5487);
-const token = process.env.telegram_token;
-const chatId = process.env.telegram_chat;
+const token = process.env.TELEGRAM_TOKEN;
+const chatId = process.env.TELEGRAM_CHAT;
 const bot = new TelegramBot(token, { polling: true });
 const username = "Santi";
 
