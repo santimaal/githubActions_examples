@@ -10,5 +10,5 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./
         with:
-          telegram_token: ${{secrets.TELEGRAM_TOKEN}}
-          telegram_chat: ${{secrets.TELEGRAM_USR_ID}}
+          TELEGRAM_TOKEN: ${{secrets.TELEGRAM_TOKEN}}
+          TELEGRAM_CHAT: ${{secrets.TELEGRAM_USR_ID}}
