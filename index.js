@@ -1,9 +1,10 @@
-const core = require('@actions/core');
+// const core = require('@actions/core');
 const TelegramBot = require('node-telegram-bot-api');
 
 // replace the value below with the Telegram token you receive from @BotFather
-const token = core.getInput('telegram_token');
-const chat_id= core.getInput('telegram_chat')
+const token = process.env.telegram_token
+
+const chat_id = Number(process.env.telegram_chat);
 const message = "this is a test"
 
 // Create a bot that uses 'polling' to fetch new updates
