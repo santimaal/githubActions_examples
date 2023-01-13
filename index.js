@@ -12,6 +12,7 @@ let image = f_test == "success" ? f_pos : f_neg;
 URL = URL.replace("img", image[0])
 URL = URL.replace("text", image[1]);
 URL = "![MEME](" + URL + ")"
+console.log("ejecutandose el index");
 
 fs.writeFile(readme, URL, function (err) {
     if (err) throw err;
