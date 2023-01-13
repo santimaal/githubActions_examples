@@ -20,8 +20,9 @@ jobs:
         run: echo "error"
 
   readme:
-    needs: test-execution
     runs-on: ubuntu-latest
+    if: ${{ always() }}
+    needs: test-execution
     steps:
       - name: checkout code
         uses: actions/checkout@v2
