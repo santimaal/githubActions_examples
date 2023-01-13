@@ -13,7 +13,7 @@ jobs:
         run: npm install -D
       - name: jest test
         id: test
-        run: npm test
+        run: npm install jest && npm test
         continue-on-error: true
       - name: Check on failures
         if: steps.test.outcome != 'success'
