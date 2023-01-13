@@ -30,4 +30,11 @@ jobs:
         env:
           frase_positiva: "cryingfloor/Olee funcionan los Tests"
           frase_negativa: "cryingfloor/Fallaron los Tests"
-          resultado_tests: ${{ needs.jest.result }}
+          resultado_tests: ${{ needs.test-execution.result }}
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: "."
+          author_name: "Santi Martinez Albert"
+          author_email: "santimartinezalbert02@gmail.com"
+          message: "Readme Updated succesfully"
+          push: true
