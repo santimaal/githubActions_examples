@@ -2,7 +2,6 @@ const path = require('path');
 const fs = require("fs");
 
 const readme = path.resolve('./README.md')
-const test = "jose/paco"
 const f_pos = process.env.frase_positiva.split("/");
 const f_neg = process.env.frase_negativa.split("/");
 const f_test = process.env.resultado_tests;
