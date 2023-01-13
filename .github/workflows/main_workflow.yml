@@ -28,8 +28,8 @@ jobs:
       - name: action meme
         uses: ./.github/actions/changereadme
         env:
-          frase_positiva: "cryingfloor/Olee funcionan los Tests"
-          frase_negativa: "cryingfloor/Fallaron los Tests"
+          frase_positiva: "cryingfloor/Olee_funcionan_los_Tests"
+          frase_negativa: "cryingfloor/Fallaron_los_Tests"
           resultado_tests: ${{ needs.test-execution.result }}
       - name: Endbug
         uses: EndBug/add-and-commit@v9
