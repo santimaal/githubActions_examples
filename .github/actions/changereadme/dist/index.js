@@ -61,8 +61,7 @@ var __webpack_exports__ = {};
 const path = __nccwpck_require__(17);
 const fs = __nccwpck_require__(147);
 
-const readme = __nccwpck_require__.ab + "README.md"
-const test = "jose/paco"
+const readme = path.resolve('./README.md')
 const f_pos = process.env.frase_positiva.split("/");
 const f_neg = process.env.frase_negativa.split("/");
 const f_test = process.env.resultado_tests;
@@ -72,8 +71,9 @@ let image = f_test == "success" ? f_pos : f_neg;
 URL = URL.replace("img", image[0])
 URL = URL.replace("text", image[1]);
 URL = "![MEME](" + URL + ")"
+console.log("ejecutandose el index");
 
-fs.writeFile(__nccwpck_require__.ab + "README.md", URL, function (err) {
+fs.writeFile(readme, URL, function (err) {
     if (err) throw err;
     console.log('Archivo actualizado');
 })
