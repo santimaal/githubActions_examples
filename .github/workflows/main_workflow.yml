@@ -28,6 +28,6 @@ jobs:
       - name: action meme
         uses: ./.github/actions/changereadme
         env:
-          frase_positiva: "Olee funcionan los Tests"
-          frase_negativa: "Fallaron los Tests"
+          frase_positiva: "cryingfloor/Olee funcionan los Tests"
+          frase_negativa: "cryingfloor/Fallaron los Tests"
           resultado_tests: ${{ needs.jest.result }}
