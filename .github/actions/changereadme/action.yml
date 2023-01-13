@@ -1,0 +1,15 @@
+name: "MemeMD"
+description: ""
+inputs:
+  frase_positiva:
+    description: "frase"
+    required: true
+  frase_negativa:
+    description: "frase"
+    required: true
+  resultado_tests:
+    description: "frase"
+    required: true
+runs: 
+  using: node16
+  main: dist/index.js
